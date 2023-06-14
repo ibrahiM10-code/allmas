@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+/* h1 {
+    background-color: green;
+    color: white;
+    display: inline;
+    padding: 10px;
+} */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: #91C788;
+}
+
+
+select {
+    border: 1px solid gainsboro;
+
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.big-text {
+    font-size: 4rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.big-text h1 {
+    text-transform: uppercase;
+}
+
+.big-text h4 {
+    font-style: italic;
+}
+
+.imagen-principal {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.company-features {
+    margin-top: 5.5rem;
+    padding: 4.5% 0;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 4rem;
+    margin-bottom: 1.2rem;
+}
+
+.feature {
+    font-weight: bold;
+}
+
+.opinion-container {
+    display: flex;
+    margin: 0 200px;
+    width: 70%;
+    padding: 100px 0;
+}
+
+.person-picture {
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.opinion {
+    margin-left: 150px;
+    background-color: #52734D;
+    padding: 50px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.opinion-person-pic {
+    width: 200px;
+}
+
+/* Login CSS */
+.login-nav {
+    height: 70px;
+}
+
+.login-container {
+    height: 740px;
+    width: 500px;
+    margin: 50px auto;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+.login-container-request {
+    height: 910px;
+    width: 500px;
+    margin: 50px auto;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+.imagen-login img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.formulario {
+    margin-top: 25px;
+}
+
+.formulario h2 {
+    text-align: center;
+}
+
+.formulario .dropdown {
+    position: relative;
+    left: 65px;
+}
+
+.submit-login {
+    position: relative;
+    left: 150px;
+    top: 30px;
+    width: 40%;
+    background-color: rgb(177, 234, 177);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#alerta-login {
+    float: right;
+    position: relative;
+    bottom: 500px;
+    right: 50px;
+    display: none;
+}
+
+
+#alerta-cuenta-nueva {
+    margin-top: 100px;
+    display: none;
+}
+
+#alerta-cliente-nuevo {
+    float: right;
+    position: relative;
+    bottom: 620px;
+    display: none;
+}
+
+#alerta-semilla-nueva {
+    float: right;
+    position: relative;
+    bottom: 430px;
+    left: 170px;
+    display: none;
+}
+
+.form-new-accounts {
+    padding-top: 100px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.imagen-funcionario {
+    float: right;
+    position: relative;
+    right: 200px;
+    top: 20px;
+    text-align: center;
+}
+
+#foto-funcionario {
+    margin-bottom: 15px;
+    width: 200px;
+    /* border-radius: 50%; */
+}
+
+#link-historico-semillas {
+    float: right;
+}
+
+.cards-container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    margin-top: 100px;
+}
+
+.card {
+    margin-left: 100px;
+}
+
+.cards-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body h5 {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.card-title:hover {
+    text-decoration: underline;
+}
+
+#img-vertical-solicitud {
+    height: 190px;
+    object-fit: cover;
+}
+
+#alerta-envio-solicitud {
+    float: right;
+    position: relative;
+    bottom: 100px;
+    right: 100px;
+    display: none;
+}
+
+.siembra-form {
+    position: relative;
+    left: 240px;
+}
+
+#alerta-siembra-nueva {
+    float: right;
+    position: relative;
+    right: 100px;
+    margin-top: 200px;
+    display: none;
+}
+
+#alerta-cambio-estado {
+    float: right;
+    display: none;
+}
+
+#alerta-zona {
+    float: right;
+    position: relative;
+    right: 300px;
+}
+
+.imagen-zona {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    /* box-shadow: 16px 14px 30px 1px rgba(0, 0, 0, 0.67); */
+}
+
+#alerta-eliminacion {
+    display: none;
+}
+
+#alerta-modificacion {
+    display: none;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>AllMas | Semillas</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar login-nav">
+            <div class="container-fluid d-flex justify-content-center">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="assets/img/logo.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    AllMas
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="container mt-5">
+            <h5>Agregar Semillas</h5>
+            <form action="">
+                <div class="mt-5 mb-3 row">
+                    <label for="inputCodSemilla" class="col-sm-2 col-form-label">Codigo de Semilla</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputCodSemilla">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputStockSemilla" class="col-sm-2 col-form-label">Stock</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="inputStockSemilla">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputNomSemilla" class="col-sm-2 col-form-label">Nombre Semilla</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputNomSemilla">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputTipoSemilla" class="col-sm-2 col-form-label">Tipo Semilla</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputTipoSemilla">
+                        <!-- <select name="" id="">
+                            <option value="">Semilla de sandía</option>
+                            <option value="">Semilla de chía</option>
+                            <option value="">Semilla de cilantro</option>
+                            <option value="">Semilla de Girasol</option>
+                        </select> -->
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <!-- Must show current date using JavaScript -->
+                    <label for="inputFechaIngreso" class="col-sm-2 col-form-label">Fecha de Ingreso</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="inputFechaIngreso">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPrecioVenta" class="col-sm-2 col-form-label">Precio Venta</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="inputPrecioVenta">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPrecioCompra" class="col-sm-2 col-form-label">Precio Compra</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="inputPrecioCompra">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="fileImagenPlanta" class="col-sm-2 col-form-label">Imagen de la planta germinada</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="fileImagenPlanta">
+                    </div>
+                </div>
+
+                <!-- <p><a class="link-opacity-100" href="./historico_semillas.html" id="link-historico-semillas">Ver
+                        histórico de semillas</a></p> -->
+
+                <button type="button" class="btn btn-success" name="semilla" onclick="showAlert()">Guardar datos de
+                    la semilla</button>
+
+                <div class="alert alert-success alert-dismissible fade show col-3" role="alert"
+                    id="alerta-semilla-nueva">
+                    Datos guardados correctamente
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </form>
+
+            <div class="container mt-4 mb-4">
+                <p><a class="link-opacity-100" href="listado_semillas.html">Haga clic aqui para leer, modificar o borrar
+                        semillas</a></p>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-body-secondary">© 2023 AllMas Servicios de Almácigos</p>
+
+                <a href="/"
+                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+
+                <!-- poner los iconos de las redes sociales y solo mantener el home -->
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link mt-1 text-body-secondary">Contactos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><img
+                                src="./assets/img/facebook.png"></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><img
+                                src="./assets/img/gmail.png"></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"> <img
+                                src="./assets/img/twitter.png"> </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><img
+                                src="./assets/img/instagram.png"></a></li>
+                </ul>
+            </footer>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
