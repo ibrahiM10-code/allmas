@@ -1,3 +1,5 @@
+<?php include("templates/conexion_sesion.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,21 +15,17 @@
 
 <body>
 
-    <header>
-        <nav class="navbar login-nav">
-            <div class="container-fluid d-flex justify-content-center">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="assets/img/logo.png" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">
-                    AllMas
-                </a>
-            </div>
-        </nav>
-    </header>
+    <?php include("templates/nav.php");?>
 
     <main>
-
-        <form action="./functions/crud_cuentas.php" method="post" class="form-new-accounts">
+        <?php if(isset($_GET["cuentaCreada"])):?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Cuenta creada!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php endif;?>
+        <form action="./functions/crud_cuentas.php" method="post" class="form-new-accounts"
+            enctype="multipart/form-data">
 
             <div class="container">
                 <h1>Crear cuentas nuevas</h1>
@@ -56,7 +54,7 @@
                 <div class="input-group mt-3 mb-3">
                     <input type="text" class="form-control" placeholder="Nuevo correo empresarial"
                         aria-label="Nuevo correo empresarial" aria-describedby="basic-addon2" name="correo-usuario">
-                    <span class="input-group-text" id="basic-addon2">@allmas.com</span>
+                    <span class="input-group-text" id="basic-addon2">@gmail.com</span>
                 </div>
                 <div class="mt-3 mb-3">
                     <input type="password" id="inputPassword5" class="form-control" placeholder="Clave"
@@ -74,7 +72,7 @@
                 <h6>Importe la foto de perfil del usuario</h6>
                 <div class="mb-4 row">
                     <div class="col-sm-10">
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" name="foto-perfil">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success" name="nuevoUsuario">Crear nueva
@@ -88,39 +86,9 @@
             </div>
         </form>
 
-        <div class="alert alert-success alert-dismissible fade show col-2" id="alerta-login" role="alert">
-            Inicio sesión correctamente!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
     </main>
 
-
-    <footer>
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <p class="col-md-4 mb-0 text-body-secondary">© 2023 AllMas Servicios de Almácigos</p>
-
-                <a href="/"
-                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <img src="assets/img/logo.png" alt="">
-                </a>
-
-                <!-- poner los iconos de las redes sociales y solo mantener el home -->
-
-                <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item"><a href="#" class="nav-link mt-1 text-body-secondary">Contactos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><img
-                                src="./assets/img/facebook.png"></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><img
-                                src="./assets/img/gmail.png"></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"> <img
-                                src="./assets/img/twitter.png"> </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><img
-                                src="./assets/img/instagram.png"></a></li>
-                </ul>
-            </footer>
-        </div>
-    </footer>
+    <?php include("templates/footer.php");?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">

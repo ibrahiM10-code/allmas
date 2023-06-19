@@ -1,3 +1,5 @@
+<?php include("templates/conexion_sesion.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php">
                     <img src="./assets/img/logo.png" alt="Logo" width="30" height="24"
                         class="d-inline-block align-text-top" id="logo">
                     <span class="px-2">AllMas Servicios de Almácigos</span>
@@ -28,16 +30,54 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
+                        <?php if ($_SESSION["tipoUsuario"] == 10):?>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./login.html">Iniciar Sesión</a>
+                            <a class="nav-link active" aria-current="page" href="./crear_cuentas.php">Crear cuenta</a>
                         </li>
+                        <?php endif;?>
+                        <?php if (($_SESSION["tipoUsuario"]) == 10):?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#contactos-footer">Contactos</a>
+                            <a class="nav-link active" href="./mantenedor_cliente.php">Clientes</a>
                         </li>
+                        <?php endif;?>
+                        <?php if (($_SESSION["tipoUsuario"]) == 10 || ($_SESSION["tipoUsuario"]) == 1):?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./recuperar_clave.html">Recuperar Clave</a>
+                            <a class="nav-link active" href="./mantenedor_semillas.php">Semillas</a>
                         </li>
+                        <?php endif;?>
+                        <?php if (($_SESSION["tipoUsuario"]) == 10 || ($_SESSION["tipoUsuario"]) == 1 || ($_SESSION["tipoUsuario"]) == 2 || ($_SESSION["tipoUsuario"]) == 3):?>
+                        <li class="nav-item">
+                            <a href="./mantenedor_solicitud.php" class="nav-link active">Solicitud</a>
+                        </li>
+                        <?php endif;?>
+                        <li class="nav-item">
+                            <a href="#contactos-footer" class="nav-link active">Contactos</a>
+                        </li>
+                        <?php if (($_SESSION["tipoUsuario"]) == 10 || ($_SESSION["tipoUsuario"]) == 1 || ($_SESSION["tipoUsuario"]) == 2 || $_SESSION["tipoUsuario"] == 3):?>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./functions/cerrar_sesion.php">Salir</a>
+                        </li>
+                        <?php endif;?>
                     </ul>
+                    <span class="navbar-text">
+                        <?php switch($_SESSION["tipoUsuario"]){
+                                case 3:
+                                    $_SESSION["tipoUsuario"] = "Cliente";
+                                    break;
+                                case 2:
+                                    $_SESSION["tipoUsuario"] = "Jefe de Siembra";
+                                    break;
+                                case 1:
+                                    $_SESSION["tipoUsuario"] = "Administrativo";
+                                    break;
+                                case 10:
+                                    $_SESSION["tipoUsuario"] = "Administrador";
+                                    break;
+                                default:
+                                    break;
+                        }?>
+                        <?php echo $_SESSION['nombreUsuario'] . " (". $_SESSION['tipoUsuario'] . ")"; ?>
+                    </span>
                 </div>
             </div>
         </nav>
